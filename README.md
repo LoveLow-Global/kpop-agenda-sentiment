@@ -4,7 +4,7 @@
 
 **Target of Analysis**: K-pop related articles, over the past 24 months (Time period is subject to change)
 
-**Data Source**: News data, Korean SNS platforms such as X(Twitter), DCinside, Instagram.
+**Data Source**: News data, Korean SNS platforms such as [X](https://developer.x.com/en/portal/dashboard)(Twitter), DCinside, [Instagram](https://developers.facebook.com/docs/instagram-platform).
 
 ## Step 1 - Cluster News Articles to Distinct Agenda Topics
 
@@ -72,4 +72,8 @@ For example, after the news of 카리나 and 이재욱 dating was first told to 
 
 Comparison based on the results. TBD after checking the amount of data.
 
-Visualization: Charts and graphs to show results, may use Python or R instead as Step 1&2 is likely to be in Python, and R provides great visualization packages. [Plots.jl](https://docs.juliaplots.org/stable/), [Plotly for Julia](https://plotly.com/julia/), [wordcloud for Julia](https://github.com/guo-yong-zhi/WordCloud.jl), [TimeSeries Plotting for Julia](https://juliastats.org/TimeSeries.jl/latest/plotting/)
+The format that we use here could be similar to [This Research Paper](https://arxiv.org/abs/2308.04477). The topic is unrelated, but we can use Page 4 - Table II's format to show Category - Article. We can also use Page 7 - Figure 1's format to show the different reactions of each platform.
+
+Visualization: Charts and graphs to show results, may use Python or R instead as Step 1 & 2 will likely be in Python, and R provides great visualization packages. [Plots.jl](https://docs.juliaplots.org/stable/), [Plotly for Julia](https://plotly.com/julia/), [wordcloud for Julia](https://github.com/guo-yong-zhi/WordCloud.jl), [TimeSeries Plotting for Julia](https://juliastats.org/TimeSeries.jl/latest/plotting/)
+
+
