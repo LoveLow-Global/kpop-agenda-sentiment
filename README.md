@@ -1,24 +1,26 @@
+# K-Pop Agenda Dynamics: A Comparative Analysis of Topic Diffusion and Sentiment on News and Social Media
 # Comparative Dynamics of K-Pop News Agenda Setting and Social Media Sentiment
 
 **국문 한줄 요약**: 케이팝 관련 기사들을 분야별로 나누고, 분야별로 온라인 커뮤니티/SNS에서 어떻게 반응이 나오는지를 비교한다. 그 후, 커뮤니티/SNS 플렛폼 별 반응에 대해서도 비교한다.
 
-**Target of Analysis**: K-pop related articles, over the past 24 months (Time period is subject to change)
+**Target of Analysis**: K-pop related articles, from 20240101 to 20241231
 
-**Data Source**: News data, Korean SNS platforms such as [X](https://developer.x.com/en/portal/dashboard)(Twitter), DCinside, [Instagram](https://developers.facebook.com/docs/instagram-platform).
+**Data Source**: News data, Korean SNS platforms such as X(Twitter), DCinside, Instagram.
 
 ## Step 1 - Cluster News Articles to Distinct Agenda Topics
 
 ### 1.1 - Data Collection
 
-Collect data from various media companies (ex: 빅픽처, 가요소식)
+Collect data from various articles. 총 3658개의 기사를 수집했고, 2024년 1월 1일부터 2024년 12월 31일까지 매일 올라온 기사중, 일간 조회수가 가장 높은 10개의 기사를 매일 수집했다. 7월29일과 12월23일의 Top 10 기사중에서는 (각각 1개씩) 열리지 않는 기사가 있어서, 생략했다.
 
 $\to$ Data Collection method는 [A Topic Agenda Setting Model]을 참고
 
 [Naver엔터](https://m.entertain.naver.com/series?tab=subject&categoryId=ALL)
 
-Extract text data from the news articles. May extract text from the images as well. Not sure about video data, we will likely not use it.
+Extract text data from the news articles.
 
-[BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), [Scrapy](https://scrapy.org/), [Crawl4AI](https://github.com/unclecode/crawl4ai), [Azua](https://github.com/microsoft/project-azua/)
+Selenium,
+[BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 
 ### 1.2 - Find news articles with same content
 
@@ -46,8 +48,6 @@ $\to$ Topic Granularity는 어느 정도로 할지에 대해서(예를 들어서
 
 In Naver, we can see the number of on the news articles. ([example](https://m.entertain.naver.com/series/article/001/0015192965?type=series&cid=1200015)) We can combine them per each news, and then select the top 10 most influential 10 news per topic type.
 
-$\to$ Assuming we collect using "Naver엔터"
-
 ### 2.2 - Analysis
 
 Analyze the user reactions on various websites / SNS platforms. (number of likes, comments, shares)
@@ -72,8 +72,4 @@ For example, after the news of 카리나 and 이재욱 dating was first told to 
 
 Comparison based on the results. TBD after checking the amount of data.
 
-The format that we use here could be similar to [This Research Paper](https://arxiv.org/abs/2308.04477). The topic is unrelated, but we can use Page 4 - Table II's format to show Category - Article. We can also use Page 7 - Figure 1's format to show the different reactions of each platform.
-
-Visualization: Charts and graphs to show results, may use Python or R instead as Step 1 & 2 will likely be in Python, and R provides great visualization packages. [Plots.jl](https://docs.juliaplots.org/stable/), [Plotly for Julia](https://plotly.com/julia/), [wordcloud for Julia](https://github.com/guo-yong-zhi/WordCloud.jl), [TimeSeries Plotting for Julia](https://juliastats.org/TimeSeries.jl/latest/plotting/)
-
-
+Visualization: Charts and graphs to show results, may use Python or R instead as Step 1&2 is likely to be in Python, and R provides great visualization packages. [Plots.jl](https://docs.juliaplots.org/stable/), [Plotly for Julia](https://plotly.com/julia/), [wordcloud for Julia](https://github.com/guo-yong-zhi/WordCloud.jl), [TimeSeries Plotting for Julia](https://juliastats.org/TimeSeries.jl/latest/plotting/)
