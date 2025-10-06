@@ -1,16 +1,18 @@
 # K-Pop Agenda Dynamics: A Comparative Analysis of Topic Diffusion and Sentiment on News and Social Media
 
-**국문 한줄 요약**: 케이팝 관련 기사들을 분야별로 나누고, 분야별로 온라인 커뮤니티/SNS에서 어떻게 반응이 나오는지를 비교한다. 그 후, 커뮤니티/SNS 플렛폼 별 반응에 대해서도 비교한다.
+**Note that this research is currently not ongoing. I am waiting for someone to do the remaining parts of the research with me. Please contact awesomepeoplefund@gmail.com for inquires.**
 
-**Target of Analysis**: Top K-pop related articles on [Naver엔터](https://m.entertain.naver.com/series?tab=subject&categoryId=ALL), from 20240101 to 20241231
+**One line summary**: Sort K-pop related articles into distinct agenda topics, then check the characteristics of community response for each distinct agenda topics. We also compare how the community response differ from one online community / SNS platform to another.
 
-**Data Source**: News data, Korean SNS platforms such as X(Twitter)[API](https://developer.x.com/en/docs/x-api), DCinside[API?](https://github.com/eunchuldev/dcinside-python3-api), [Instagram](https://github.com/huaying/instagram-crawler).
+**Target of Analysis**: Top K-pop related articles on [Naver Entertainment](https://m.entertain.naver.com/series?tab=subject&categoryId=ALL), from 20240101 to 20241231
+
+**Data Source**: News data, Korean SNS platforms such as X(Twitter)[API](https://developer.x.com/en/docs/x-api), DCinside, and Instagram.
 
 ## Step 1 - Cluster News Articles to Distinct Agenda Topics
 
 ### 1.1 - News Data Collection
 
-From Jan 1st, 2024 to Dec 31rd, 2024, the 10 articles with the highest number of daily views were collected. Top [5th article on July 29th](https://m.entertain.naver.com/ranking/article/144/0000978581) and [4th article on Dec 23rd](https://m.entertain.naver.com/ranking/article/312/0000693987) could not be opened and so I just skipped that. Therefore, a total of 3658 articles were collected.
+From Jan 1st, 2024 to Dec 31rd, 2024, the 10 articles with the highest number of daily views were collected. Top [5th article on July 29th](https://m.entertain.naver.com/ranking/article/144/0000978581) and [4th article on Dec 23rd](https://m.entertain.naver.com/ranking/article/312/0000693987) could not be opened and so there is uncollected data. However, it was a extremely small portion of the total number of collected articles and therefore I moved on. In essence, a total of 3658 articles were collected.
 
 For this task, I first obtained the list of top 10 articles for each day.
 [Source code for Ranking Crawler](https://github.com/LoveLow-Global/kpop-agenda-sentiment/blob/main/Step1/Step1-1/ranking_crawler.ipynb)
@@ -18,20 +20,13 @@ For this task, I first obtained the list of top 10 articles for each day.
 
 Then, I obtained the article texts for the 3658 articles.
 [Source code for Content Crawler](https://github.com/LoveLow-Global/kpop-agenda-sentiment/blob/main/Step1/Step1-1/content_crawler.ipynb)
-Article texts on only on my computer.
-
-Used Selenium along with
-[BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) for this. (Dynamic crawling)
+Article texts are not on this repository, but you can run the codes provided and get them yourself.
 
 Note: Ignore the **Rank** column in the tsv file for now (written 20250220).
 
 ### 1.2 - Find news articles with same content
 
 Sort out the news articles with the same content. It is very likely that differnet media companies posted articles with the core information. Example: [Article 1](https://m.entertain.naver.com/ranking/article/382/0001097705) and [Article 2](https://m.entertain.naver.com/ranking/article/312/0000643408) is about the same event. A single company could have also re-posted with a little tweak over time as well. We will sort out the articles with the same core information. This is to focus on the upload time of the 1st news article, as the information diffusion among the public starts then.
-
-$\to$ NER
-
-In this process, I failed to improve accuracy over a certain point. This means that some articles are classified as **different**, even after NER. Therefore, I will manually check all the articles before for better accuracy before starting Step2.
 
 ### 1.3 - Topic Modeling
 
@@ -69,6 +64,8 @@ From this, we can draw insights on the distinct agenda topics and their differen
 For example, after the news of 카리나 and 이재욱 dating was first told to the public by 디스패치(company code: 311), we can analyze the number of articles with '카리나' or '재욱' included in the article, and analyze how the numbers of these articles change over time. We can also check the number of changes in the positive / negative word usage in the articles containing '카리나' or '재욱'. This data can be part of the "romance" category. (category name subject to change)
 
 ## Step 3 - Comparison Between the Different Diffusion and Sentiment Across Different Topics and Platforms
+
+To be continued when this research resumes.
 
 Comparison based on the results. TBD after checking the amount of data.
 
