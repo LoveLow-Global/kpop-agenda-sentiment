@@ -18,6 +18,8 @@ For this task, I first obtained the list of top 10 articles for each day.
 [Source code for Ranking Crawler](https://github.com/LoveLow-Global/kpop-agenda-sentiment/blob/main/Step1/Step1-1/ranking_crawler.ipynb)
 [list of top10 articles](https://github.com/LoveLow-Global/kpop-agenda-sentiment/blob/main/Step1/metadata.tsv)
 
+The reason of using a tsv file instead of the widely used csv file is because the articles have a lot of commas in their titles, which can reading the csv file very confusing, if sorted in that format.
+
 Then, I obtained the article texts for the 3658 articles.
 [Source code for Content Crawler](https://github.com/LoveLow-Global/kpop-agenda-sentiment/blob/main/Step1/Step1-1/content_crawler.ipynb)
 Article texts are not on this repository, but you can run the codes provided and get them yourself.
