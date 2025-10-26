@@ -1,6 +1,8 @@
 # K-Pop Agenda Dynamics: A Comparative Analysis of Topic Diffusion and Sentiment on News and Social Media
 
-**Note that this research is currently not ongoing. I am waiting for someone to do the remaining parts of the research with me. Please contact awesomepeoplefund@gmail.com for inquires.**
+**Note that this research is currently not ongoing. I am waiting for someone to do the remaining parts of the research with me. Please contact awesomepeoplefund@gmail.com for inquires.**,,
+
+**Update on Oct 26th, 2025: This research will resume soon, will re-start with in one month. Please contact me if anyone is willing to join.**
 
 **One line summary**: Sort K-pop related articles into distinct agenda topics, then check the characteristics of community response for each distinct agenda topics. We also compare how the community response differ from one online community / SNS platform to another.
 
